@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Saasapp</title>
+    <title>venus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Contrail+One" rel="stylesheet">
+   
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +13,39 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class='container'>
+        <div class="navbar-header">
+           <a class="navbar-brand" href="#">
+            
+          </a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            
+          </button>
+          <%= link_to root_path ,class:"navbar-brand" do %>
+            <i class="fa fa-group" ></i>
+            <strong>SaGaR</strong>
+          <% end%>
+        </div>
+        <div class="collapse navbar-collapse"  id="main-nav-collapse">
+          <ul class="nav navbar-nav navbar-right" >
+            <li><%= link_to "About Us", about_path%></li>
+            <li><%= link_to "Contact Us", "/contacts/new"%></li>
+            
+            <li><a href="https://goo.gl/maps/g4NqSvaV1962" target="blank"> Visit Us</a></li>
+            
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    
+      <%= yield %>
+  
+  
+  
   </body>
 </html>
